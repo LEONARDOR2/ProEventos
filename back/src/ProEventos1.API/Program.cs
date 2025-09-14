@@ -15,6 +15,16 @@ namespace ProEventos1
             );
 
             builder.Services.AddControllers();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                    });
+            });
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -28,6 +38,8 @@ namespace ProEventos1
             }
 
             app.UseHttpsRedirection();
+            
+            app.UseCors("AllowAll");
 
             app.MapControllers();
 

@@ -1,4 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+
 
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+.purple-head th {
+  color: #b73a55;
+}
+body {
+  background-color: #f8bbd0;
+}
+table tbody tr:hover {
+  background-color: #b66c89;
+}
+.btn-custom {
+  padding: 0.75rem 1.0rem; /* aumenta área clicável */
+  font-size: 1rem;         /* aumenta fonte */
+}
+ .btn-wide {
+  min-width: 120px;  /* aumenta o comprimento */
+}
+  .btn-tall {
+    min-height: 20px;  /* aumenta a altura */
+  }
